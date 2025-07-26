@@ -62,6 +62,18 @@ SmartDropdown<String>(
 )
 
 ```
+```
+🧙 Create New Item
+
+SmartDropdown<String>(
+  ...
+  onCreateTap: (newValue) {
+    print("Create tapped with value: $newValue");
+    // Add it to your backend or list
+  },
+)
+
+```
 
 
 ## 🧾 Parameters 
