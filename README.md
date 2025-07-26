@@ -60,7 +60,6 @@ SmartDropdown<String>(
   },
   hintText: 'Select colors',
 )
-
 ```
 ```
 🧙 Create New Item
@@ -72,7 +71,6 @@ SmartDropdown<String>(
     // Add it to your backend or list
   },
 )
-
 ```
 
 
