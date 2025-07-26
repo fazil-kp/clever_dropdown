@@ -1,4 +1,4 @@
-import 'package:clever_dropdown/smart_dropdown.dart';
+import 'package:clever_dropdown/clever_dropdown.dart';
 import 'package:flutter/material.dart';
 
 void main() {
