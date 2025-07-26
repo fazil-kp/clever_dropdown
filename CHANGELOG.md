@@ -1,4 +1,3 @@
-
 ## [1.0.0] 
 
 🎉 Initial release of `clever_dropdown`: A powerful and flexible dropdown widget for Flutter with rich customization and interaction features.
