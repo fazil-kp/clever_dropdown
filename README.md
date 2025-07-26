@@ -31,5 +31,5 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  smart_dropdown: ^1.0.0
+  smart_dropdown: latest_version
 ```
