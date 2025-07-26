@@ -32,3 +32,19 @@ Add this to your `pubspec.yaml`:
 dependencies:
   smart_dropdown: latest_version
 ```
+
+| Parameter                  | Type                         | Required | Default        | Description                                        |
+| -------------------------- | ---------------------------- | -------- | -------------- | -------------------------------------------------- |
+| `items`                    | `List<T>`                    | No       | `[]`           | List of options for dropdown                       |
+| `asyncItems`               | `Future<List<T>> Function()` | No       | `null`         | Fetch items asynchronously                         |
+| `hintText`                 | `String`                     | No       | `'Select'`     | Placeholder text                                   |
+| `isMultiple`               | `bool`                       | No       | `false`        | Enable multi-selection                             |
+| `onChanged`                | `void Function(dynamic)`     | Yes      | `null`         | Callback for selection changes                     |
+| `onCreateTap`              | `void Function(String)`      | No       | `null`         | Callback for adding new item (on Enter or tap)     |
+| `itemAsString`             | `String Function(T)`         | No       | `null`         | Converts item to displayable string                |
+| `enableAddItem`            | `bool`                       | No       | `false`        | Allow adding new values dynamically                |
+| `maxListHeight`            | `double`                     | No       | `200.0`        | Max height of dropdown list                        |
+| `smoothBorderRadius`       | `SmoothBorderRadius`         | No       | `default`      | Custom smooth border radius using `figma_squircle` |
+| `dropdownColor`            | `Color`                      | No       | `Colors.white` | Dropdown background color                          |
+| `borderColor`              | `Color`                      | No       | `Colors.grey`  | Outline border color                               |
+| `showDropdownOnlyOnSearch` | `bool`                       | No       | `false`        | Show dropdown only when user types something       |
