@@ -42,7 +42,10 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Single Selection Dropdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text(
+              'Single Selection Dropdown',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             CleverDropdown<String>(
               hintText: 'Select a fruit',
@@ -67,9 +70,15 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
               itemAsString: (String value) => value,
             ),
             const SizedBox(height: 20),
-            Text('Selected: ${selectedSingleValue ?? "None"}', style: const TextStyle(fontSize: 16)),
+            Text(
+              'Selected: ${selectedSingleValue ?? "None"}',
+              style: const TextStyle(fontSize: 16),
+            ),
             const SizedBox(height: 30),
-            const Text('Multi Selection Dropdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text(
+              'Multi Selection Dropdown',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             CleverDropdown<String>(
               hintText: 'Select fruits',
@@ -96,7 +105,10 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
               createOnEnter: true,
             ),
             const SizedBox(height: 20),
-            Text('Selected: ${selectedMultiValues.isEmpty ? "None" : selectedMultiValues.join(", ")}', style: const TextStyle(fontSize: 16)),
+            Text(
+              'Selected: ${selectedMultiValues.isEmpty ? "None" : selectedMultiValues.join(", ")}',
+              style: const TextStyle(fontSize: 16),
+            ),
           ],
         ),
       ),
