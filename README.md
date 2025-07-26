@@ -33,6 +33,39 @@ dependencies:
   smart_dropdown: latest_version
 ```
 
+## 🔧 Usage
+
+
+```
+// ✅ Single Selection
+SmartDropdown<String>(
+  items: ['Apple', 'Banana', 'Orange'],
+  value: 'Banana',
+  onChanged: (value) {
+    print('Selected: $value');
+  },
+  hintText: 'Select fruit',
+  isMultiple: false,
+)
+```
+
+```
+✅ Multi Selection
+SmartDropdown<String>(
+  items: ['Red', 'Green', 'Blue'],
+  isMultiple: true, // Make this true 
+  initialValues: ['Red'],
+  onChanged: (values) {
+    print('Selected Colors: $values');
+  },
+  hintText: 'Select colors',
+)
+
+```
+
+
+## 🧾 Parameters 
+
 | Parameter                  | Type                         | Required | Default        | Description                                        |
 | -------------------------- | ---------------------------- | -------- | -------------- | -------------------------------------------------- |
 | `items`                    | `List<T>`                    | No       | `[]`           | List of options for dropdown                       |
