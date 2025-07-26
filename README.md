@@ -37,7 +37,7 @@ dependencies:
 
 
 ```
-// ✅ Single Selection
+✅ Single Selection
 CleverDropdown<String>(
   items: ['Apple', 'Banana', 'Orange'],
   value: 'Banana',

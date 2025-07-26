@@ -1,6 +1,6 @@
 name: clever_dropdown
 description: A customizable Flutter dropdown widget with search, single & multi selection, and add-new-item support.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/fazil-kp/clever_dropdown.git
 
 environment:
