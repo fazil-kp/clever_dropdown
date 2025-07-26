@@ -1,5 +1,5 @@
+import 'package:clever_dropdown/smart_dropdown.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_dropdown/smart_dropdown.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +44,7 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
           children: [
             const Text('Single Selection Dropdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
-            SmartDropdown<String>(
+            CleverDropdown<String>(
               hintText: 'Select a fruit',
               items: items,
               value: selectedSingleValue,
@@ -71,7 +71,7 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
             const SizedBox(height: 30),
             const Text('Multi Selection Dropdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
-            SmartDropdown<String>(
+            CleverDropdown<String>(
               hintText: 'Select fruits',
               items: items,
               values: selectedMultiValues,

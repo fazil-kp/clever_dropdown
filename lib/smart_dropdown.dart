@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:moon_design/moon_design.dart';
 
-class SmartDropdown<T> extends StatefulWidget {
+class CleverDropdown<T> extends StatefulWidget {
   final List<T>? items;
   final T? value;
   final List<T>? values;
@@ -33,13 +33,13 @@ class SmartDropdown<T> extends StatefulWidget {
   final double? height;
   final Color? backgroundColor;
 
-  const SmartDropdown({super.key, this.items, this.borderRadius, this.backgroundColor, this.readOnly = false, this.showDropdownOnlyOnSearch = false, this.activeBorderColor, this.arrowColor, this.height, this.value, this.enableArrow = true, this.inactiveBorderColor, this.hoverBorderColor, this.errorMessage, this.values, this.onChanged, this.onListChanged, this.isMultiple = false, this.showMultipleCount = true, required this.hintText, this.trailing, this.itemAsString, this.asyncItems, this.inputFormatters, this.onCreateTap, this.createOnEnter = true, this.leading});
+  const CleverDropdown({super.key, this.items, this.borderRadius, this.backgroundColor, this.readOnly = false, this.showDropdownOnlyOnSearch = false, this.activeBorderColor, this.arrowColor, this.height, this.value, this.enableArrow = true, this.inactiveBorderColor, this.hoverBorderColor, this.errorMessage, this.values, this.onChanged, this.onListChanged, this.isMultiple = false, this.showMultipleCount = true, required this.hintText, this.trailing, this.itemAsString, this.asyncItems, this.inputFormatters, this.onCreateTap, this.createOnEnter = true, this.leading});
 
   @override
-  _SmartDropdownState<T> createState() => _SmartDropdownState<T>();
+  _CleverDropdownState<T> createState() => _CleverDropdownState<T>();
 }
 
-class _SmartDropdownState<T> extends State<SmartDropdown<T>> {
+class _CleverDropdownState<T> extends State<CleverDropdown<T>> {
   late TextEditingController searchController;
   late List<T> filteredOptionsList;
   late bool showDropdown;
@@ -51,7 +51,7 @@ class _SmartDropdownState<T> extends State<SmartDropdown<T>> {
   @override
   void initState() {
     super.initState();
-    searchController = TextEditingController(text: widget.value != null ? widget.itemAsString?.call(widget.value!).toString() ?? widget.value.toString() : '');
+    searchController = TextEditingController(text: widget.value != null ? widget.itemAsString?.call(widget.value as T).toString() ?? widget.value.toString() : '');
     filteredOptionsList = widget.items ?? [];
     showDropdown = false;
     selectedOptions = {for (T item in widget.values ?? []) item: true};
@@ -61,10 +61,10 @@ class _SmartDropdownState<T> extends State<SmartDropdown<T>> {
   }
 
   @override
-  void didUpdateWidget(SmartDropdown<T> oldWidget) {
+  void didUpdateWidget(CleverDropdown<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.value != oldWidget.value) {
-      searchController.text = widget.value != null ? widget.itemAsString?.call(widget.value!) ?? widget.value.toString() : '';
+      searchController.text = widget.value != null ? widget.itemAsString?.call(widget.value as T) ?? widget.value.toString() : '';
     }
     if (widget.values != oldWidget.values) {
       selectedOptions = {for (T item in widget.values ?? []) item: true};

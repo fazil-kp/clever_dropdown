@@ -1,4 +1,4 @@
-# 📦 smart_dropdown
+# 📦 clever_dropdown
 
 A highly customizable and powerful dropdown widget for Flutter with:
 
@@ -8,7 +8,7 @@ A highly customizable and powerful dropdown widget for Flutter with:
 - ⚡ Async item loading
 
 
-> `smart_dropdown` is perfect for forms, filters, settings, and searchable dropdown fields in Flutter apps — works across Android, iOS, Web, and Desktop.
+> `clever_dropdown` is perfect for forms, filters, settings, and searchable dropdown fields in Flutter apps — works across Android, iOS, Web, and Desktop.
 
 ---
 
@@ -30,7 +30,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  smart_dropdown: latest_version
+  clever_dropdown: latest_version
 ```
 
 ## 🔧 Usage
@@ -38,7 +38,7 @@ dependencies:
 
 ```
 // ✅ Single Selection
-SmartDropdown<String>(
+CleverDropdown<String>(
   items: ['Apple', 'Banana', 'Orange'],
   value: 'Banana',
   onChanged: (value) {
@@ -51,7 +51,7 @@ SmartDropdown<String>(
 
 ```
 ✅ Multi Selection
-SmartDropdown<String>(
+CleverDropdown<String>(
   items: ['Red', 'Green', 'Blue'],
   isMultiple: true, // Make this true 
   initialValues: ['Red'],
@@ -64,7 +64,7 @@ SmartDropdown<String>(
 ```
 🧙 Create New Item
 
-SmartDropdown<String>(
+CleverDropdown<String>(
   ...
   onCreateTap: (newValue) {
     print("Create tapped with value: $newValue");

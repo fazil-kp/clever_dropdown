@@ -1,7 +1,7 @@
-name: smart_dropdown
-description: "A new Flutter package project."
-version: 0.0.1
-homepage: https://github.com/fazil-kp/smart_dropdown.git
+name: clever_dropdown
+description: A customizable Flutter dropdown widget with search, single & multi selection, and add-new-item support.
+version: 1.0.0
+homepage: https://github.com/fazil-kp/clever_dropdown.git
 
 environment:
   sdk: ^3.8.1
