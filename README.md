@@ -275,16 +275,7 @@ Example App
 For a complete example, check the example folder in the package repository. It includes a demo app showcasing both single and multi-selection dropdowns with item creation and search functionality.
 Dependencies
 
-flutter: The core Flutter SDK.
-moon_design: Provides UI components like MoonDropdown and MoonTextInput.
-figma_squircle: Adds smooth corner radius for dropdown items.
 
-Add these to your pubspec.yaml:
-dependencies:
-  flutter:
-    sdk: flutter
-  moon_design: ^0.7.0
-  figma_squircle: ^0.5.3
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request on the GitHub repository.
