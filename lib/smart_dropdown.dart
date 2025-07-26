@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:moon_design/moon_design.dart';
 
-class CustomMoonDropdownNew<T> extends StatefulWidget {
+class SmartDropdown<T> extends StatefulWidget {
   final List<T>? items;
   final T? value;
   final List<T>? values;
@@ -33,13 +33,13 @@ class CustomMoonDropdownNew<T> extends StatefulWidget {
   final double? height;
   final Color? backgroundColor;
 
-  const CustomMoonDropdownNew({super.key, this.items, this.borderRadius, this.backgroundColor, this.readOnly = false, this.showDropdownOnlyOnSearch = false, this.activeBorderColor, this.arrowColor, this.height, this.value, this.enableArrow = true, this.inactiveBorderColor, this.hoverBorderColor, this.errorMessage, this.values, this.onChanged, this.onListChanged, this.isMultiple = false, this.showMultipleCount = true, required this.hintText, this.trailing, this.itemAsString, this.asyncItems, this.inputFormatters, this.onCreateTap, this.createOnEnter = true, this.leading});
+  const SmartDropdown({super.key, this.items, this.borderRadius, this.backgroundColor, this.readOnly = false, this.showDropdownOnlyOnSearch = false, this.activeBorderColor, this.arrowColor, this.height, this.value, this.enableArrow = true, this.inactiveBorderColor, this.hoverBorderColor, this.errorMessage, this.values, this.onChanged, this.onListChanged, this.isMultiple = false, this.showMultipleCount = true, required this.hintText, this.trailing, this.itemAsString, this.asyncItems, this.inputFormatters, this.onCreateTap, this.createOnEnter = true, this.leading});
 
   @override
-  _CustomMoonDropdownNewState<T> createState() => _CustomMoonDropdownNewState<T>();
+  _SmartDropdownState<T> createState() => _SmartDropdownState<T>();
 }
 
-class _CustomMoonDropdownNewState<T> extends State<CustomMoonDropdownNew<T>> {
+class _SmartDropdownState<T> extends State<SmartDropdown<T>> {
   late TextEditingController searchController;
   late List<T> filteredOptionsList;
   late bool showDropdown;
@@ -61,7 +61,7 @@ class _CustomMoonDropdownNewState<T> extends State<CustomMoonDropdownNew<T>> {
   }
 
   @override
-  void didUpdateWidget(CustomMoonDropdownNew<T> oldWidget) {
+  void didUpdateWidget(SmartDropdown<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.value != oldWidget.value) {
       searchController.text = widget.value != null ? widget.itemAsString?.call(widget.value!) ?? widget.value.toString() : '';
