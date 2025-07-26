@@ -36,7 +36,7 @@ class _DropdownDemoPageState extends State<DropdownDemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('CustomMoonDropdownNew Demo')),
+      appBar: AppBar(title: const Text('CleverDropDown Demo')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
