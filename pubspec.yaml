@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  figma_squircle: ^0.6.3
+  moon_design: ^1.1.0
 
 dev_dependencies:
   flutter_test:
